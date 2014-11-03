@@ -8,7 +8,7 @@ import os
 import csv
 
 def weight_score(score, module_id):
-  weights = [0.55, 0.30, 0.15]
+  weights = [0.55, 0.30, 0.15, 0.15, 0.15, 0.15, 0.15]
   return (score * weights[module_id - 1])
 
 def parse_affinities(customers, filepath, email_id, module_id):
@@ -73,7 +73,7 @@ for email_dir in email_dirs:
 
   for i, module_file in enumerate(module_files):
     print module_file + "\n"
-    customers = parse_affinities(customers, module_file, email_id, (i + 1))
+    # customers = parse_affinities(customers, module_file, email_id, (i + 1))
     print len(customers)
 
 
